@@ -34,12 +34,12 @@ describe "HauntedHouse" do
     expect(HauntedHouse.find_by(price: 25.00)).to eq(primative_fear)
   end
 
-  it "knows if it's family friendly" do
+  it "knows if it's family freindly" do
     {"Fright Fest"=>true, "13th Street Manor"=>false}.each do |name, boolean|
-      HauntedHouse.create(name: name, family_friendly: boolean)
+      HauntedHouse.create(name: name, family_freindly: boolean)
     end
-    expect(HauntedHouse.find_by(name: "Fright Fest").family_friendly).to eq(true)
-    expect(HauntedHouse.find_by(name: "13th Street Manor").family_friendly).to eq(false)
+    expect(HauntedHouse.find_by(name: "Fright Fest").family_freindly).to eq(true)
+    expect(HauntedHouse.find_by(name: "13th Street Manor").family_freindly).to eq(false)
   end
 
   it "has an opening date" do
